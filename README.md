@@ -1,31 +1,22 @@
 # SharedSass
 
-TODO: Write a gem description
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'shared_sass'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install shared_sass
+複数のプロジェクトで共有しているSCSSファイルを管理するためのGem
 
 ## Usage
+### STEP1
+forkして、```app/assets/stylesheets```内に共有したいGemを置く
 
-TODO: Write usage instructions here
+### STEP2
+使いたいプロジェクトの```Gemfile```で
+```
+gem 'shared_sass', github: 'your_name/shared_sass'
+```
+と書き、```bundle install```を行う
 
-## Contributing
+### STEP3
+適宜プロジェクト内で、gem内のSCSSをimportして使う。
 
-1. Fork it ( https://github.com/[my-github-username]/shared_sass/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+## Tips
+gem内のSCSSはディレクトリを区切っておくとわかりやすい
+
+ファイル名をshared_scss/app/assets/stylesheets/shared_scss/hoge.scssとするとするとSCSSファイル内で```@import 'shared_scss/hoge'```といったように呼び出すことが出来、shared_scss由来のSCSSか、プロジェクト固有のSCSSなのかを判別しやすくなる。

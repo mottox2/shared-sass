@@ -1,5 +1,6 @@
 require "shared_sass/version"
+require "sass"
 
 module SharedSass
-  # Your code goes here...
+  Sass.load_paths << File.expand_path("../../app/assets/stylesheets", __FILE__)
 end

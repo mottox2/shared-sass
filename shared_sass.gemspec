@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = SharedSass::VERSION
   spec.authors       = ["mottox2"]
   spec.email         = ["y.mottox2@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{SharedSass contains scss files and export your project}
+  spec.description   = %q{SharedSass contains scss files and export your project}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_dependency "sass", "~> 3.3"
 end
